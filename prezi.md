@@ -1,20 +1,15 @@
 # Overview
 
 - a big data analytics engine
-- run SQL queries over the cloud on your data
+- run SQL queries
 - it doesn't matter what size of data
 - what type of queries you do
-- it's easy to use
-- with open interfaces, REST, WebUI, ODBC
-- fully managed
-- blazingly fast
-- with ~SQL interface
-- petabyte scale
-- easy data management with ACL (Access control list)
-- fast, atomic imports
+- fast
+- easy to use
 - no administration or provisioning
 - analytics as a service
-- BigQuery, your guess was correct
+
+your guess was correct, it's BigQuery
 
 ---
 # Goal
@@ -28,7 +23,7 @@
 - try it at home!
 
 
-.right[https://these_slides.to.download]
+.right[http://hive.gl/BRQYQ]
 ---
 # Nordcloud
 
@@ -48,7 +43,7 @@
 - SQL for analytics
 - BigQuery for analytics
 
-.right[https://these_slides.to.download]
+.right[http://hive.gl/BRQYQ]
 
 ---
 # Demo with a public dataset to show the speed
@@ -56,8 +51,7 @@
 - cache off
 - 1m rows
 - 100m rows
-- 10000m rows
-- show regexp, mission impossible
+- show a mission impossible: regular expression in queries
 ---
 # How to start?
 - use your private gmail with the 300USD for two month credit
@@ -66,8 +60,11 @@
     - including the cost
 
 # How to continue
-- buy it from nordcloud
-- we invoice it in NOK
+- we are an official Google partner
+    - advisory, consulting, training and 24/7 operation duty
+    - buy Google products and services through Nordcloud
+    - we invoice it in NOK
+- looking forward to here from you
 ---
 ## Dataflow
 - use a "small" CSV file from a public dataset
@@ -83,6 +80,7 @@
 - I don't have petabyte scale problems
 - my current solution is fine
 - I've checked it a few years back but it's too limited and pricey
+- I'm not feeling safe to use it
 
 ---
 # Background
@@ -91,31 +89,49 @@
 - but
 - tables scans are daunting
 - scaling out, instead of scaling up
-- started early at google by internal need
+- started early at Google by internal need
     - fast
     - scaleable
     - ad-hoc analytics
     - not just for your data scientist
-- vastly improved
 ---
-# current state
+# Current state
 - available for the general public
-- constantly improving
+- vastly improved
 - affordable
-- API with JSON data, sounds familiar?
+- fully managed
+- higly paralleized, compressed, replicated storage
+- API with JSON data
+- easy data management with ACL (Access control list)
 - flexible, multiple input sources
+- with open interfaces, REST, WebUI, ODBC
 - joined and shared datasets
-- web console, connectors to R, Pandas, Hadoop, ODBC
 - streaming injection, data is available immediately
 - get a slice of a giant cluster of machines with guaranties rather than having a medium sized cluster
 
-### use it, it's a competitive advantage
+.center[### Use it, it's a competitive advantage!]
+---
+# Technical highlights
+- web console, connectors to R, ipython, Pandas
+- import data from Cloud Storage, Hadoop, Google Cloud DataFlow, ODBC
+- hadoop as source or sink
+- single namespace, join table from anywhere
+- fast, atomic imports
+- ETL, deduplicate within BQ
+- a rich SQL language
+- extends with nested and repeated fields
+- goes have JSON queries, raw json fields, json path type queries
+- IP address parsing
+- regular expressions
+- these are expensive in a normal relational database that has indicies
+- streaming injection API (100k rows/second per table)
+- large, multi-tenant (shared) computer cluster
 ---
 # Price
 - price model
 - current figures in NOK
 ---
-# demo of the small dataset
+# Demo of the small dataset
 - use webui
 - move on from numbers, use an ipython notebook with Julia as backend with gadfly
 ---
@@ -149,4 +165,4 @@
 - this presentation is shared with you
 - try it at home!
 
-.right[https://these_slides.to.download]
+.right[http://hive.gl/BRQYQ]
