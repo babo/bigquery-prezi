@@ -1,13 +1,13 @@
 # Overview
 
-- a big data analytics engine
+- an analytics engine
+- for big data
 - run SQL queries
+- fast
 - it doesn't matter what size of data
 - what type of queries you do
-- fast
 - easy to use
 - no administration or provisioning
-- analytics as a service
 
 your guess was correct, it's BigQuery
 
@@ -44,7 +44,7 @@ your guess was correct, it's BigQuery
 .right[http://hive.gl/BRQYQ]
 
 ---
-# Demo with a public dataset to show the speed
+# Demo to give an impression
 - 1m rows
 - cache off
 - 1m rows
@@ -52,7 +52,8 @@ your guess was correct, it's BigQuery
 - show a mission impossible: effective regular expression in queries
 ---
 # How to start?
-- use your private gmail with the 300USD for two month credit
+- use your private gmail, there is a campaign
+    - 300 USD for two month credit
 - add billing, this is required but doesn't cost you within the credit
 - prefect way to safely experiment and get a feeling about the service
     - including the cost
@@ -95,6 +96,7 @@ your guess was correct, it's BigQuery
     - scaleable
     - ad-hoc analytics
     - not just for your data scientist
+- analytics as a service
 ---
 # Current state
 - available for the general public
