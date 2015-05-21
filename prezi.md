@@ -1,12 +1,18 @@
-class: left, middle
-
 # Overview
 
+- a big data analytics engine
+- run SQL queries over the cloud on your data
+- it doesn't matter what size of data
+- what type of queries you do
+- it's easy to use
+- with open interfaces, REST, WebUI, ODBC
 - fully managed
 - blazingly fast
-- a big data analytics engine
 - with ~SQL interface
 - petabyte scale
+- easy data management with ACL (Access control list)
+- fast, atomic imports
+- no administration or provisioning
 - analytics as a service
 - BigQuery, your guess was correct
 
@@ -16,7 +22,7 @@ class: left, middle
 - give you a hands on experience about BigQuery
 - live demo
 - a practical introduction
-- enough information a burning desire to try it at home
+- enough information and a burning desire to try it at home
 - to share it with your colleagaues and like minded friends
 - this presentation is shared with you
 - try it at home!
@@ -84,7 +90,7 @@ class: left, middle
 - indexes are great
 - but
 - tables scans are daunting
-- scaling horizontaly is the way at webscale problems
+- scaling out, instead of scaling up
 - started early at google by internal need
     - fast
     - scaleable
@@ -101,9 +107,9 @@ class: left, middle
 - joined and shared datasets
 - web console, connectors to R, Pandas, Hadoop, ODBC
 - streaming injection, data is available immediately
-- using a slice of a giant cluster of machines with guaranties rather than having a medium sized cluster
+- get a slice of a giant cluster of machines with guaranties rather than having a medium sized cluster
 
-### a competitive advantage
+### use it, it's a competitive advantage
 ---
 # Price
 - price model
