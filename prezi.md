@@ -10,7 +10,7 @@
 - no administration or provisioning
 
 your guess was correct, it's BigQuery
-
+.footnote[http://hive.gl/BRQYQ]
 ---
 # Goal
 
@@ -21,9 +21,7 @@ your guess was correct, it's BigQuery
 - to share it with your colleagaues and like minded friends
 - this presentation is shared with you
 - try it at home!
-
-
-.right[http://hive.gl/BRQYQ]
+.footnote[http://hive.gl/BRQYQ]
 ---
 # ![](http://cdn2.hubspot.net/hub/453090/file-2126415513-jpg/nordcloud-logo-main-380x80.jpg)
 
@@ -34,15 +32,15 @@ your guess was correct, it's BigQuery
 - I'm here to represent the Norwegian office of Nordcloud
 - attila.babo@nordcloud.com
 
-### Please raise your hand
+.footnote[http://hive.gl/BRQYQ]
+
+???
+# Please raise your hand
 
 - heard of BigQuery
 - using analytics
     - SQL for analytics
     - BigQuery for analytics
-
-.right[http://hive.gl/BRQYQ]
-
 ---
 # Demo to give an impression
 - 1m rows
@@ -168,4 +166,4 @@ your guess was correct, it's BigQuery
 - this presentation is shared with you
 - try it at home!
 
-.right[http://hive.gl/BRQYQ]
+.footnote[http://hive.gl/BRQYQ]
