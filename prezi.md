@@ -38,8 +38,8 @@ your guess was correct, it's BigQuery
 
 - heard of BigQuery
 - using analytics
-- SQL for analytics
-- BigQuery for analytics
+    - SQL for analytics
+    - BigQuery for analytics
 
 .right[http://hive.gl/BRQYQ]
 
