@@ -25,7 +25,7 @@ your guess was correct, it's BigQuery
 
 .right[http://hive.gl/BRQYQ]
 ---
-# Nordcloud
+# ![](http://cdn2.hubspot.net/hub/453090/file-2126415513-jpg/nordcloud-logo-main-380x80.jpg)
 
 - experts in migration, automation and management of modern cloud infrastructure
 - provide advisory, consulting, training and 24/7 operation duty for cloud computing services
@@ -33,8 +33,6 @@ your guess was correct, it's BigQuery
 - headquartered in Helsinki the company is growing rapidly, in the nordics and beyond
 - I'm here to represent the Norwegian office of Nordcloud
 - attila.babo@nordcloud.com
-
-.left[![Customers](customers.png)]
 
 ### Please raise your hand
 
@@ -51,7 +49,7 @@ your guess was correct, it's BigQuery
 - cache off
 - 1m rows
 - 100m rows
-- show a mission impossible: regular expression in queries
+- show a mission impossible: effective regular expression in queries
 ---
 # How to start?
 - use your private gmail with the 300USD for two month credit
@@ -79,7 +77,7 @@ your guess was correct, it's BigQuery
 
 - I don't have petabyte scale problems
 - my current solution is fine
-- I've checked it a few years back but it's too limited and pricey
+- I've checked it a few years back but it was too limited and pricey
 - I'm not feeling safe to use it
 
 ---
@@ -88,8 +86,11 @@ your guess was correct, it's BigQuery
 - indexes are great
 - but
 - tables scans are daunting
-- scaling out, instead of scaling up
-- started early at Google by internal need
+- scaling up solutions are limited
+---
+# Solution
+- scale out!
+- started at Google by internal need
     - fast
     - scaleable
     - ad-hoc analytics
