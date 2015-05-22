@@ -19,7 +19,7 @@ your guess were correct
 - live demos
 - hands-on experience using BigQuery
 - enough information and a burning desire to try it at home
-- to share it with your colleagaues and like minded friends
+- to share it with your colleagues and like minded friends
 - this presentation is shared with you
 - try it at home!
 
@@ -98,7 +98,7 @@ I understand your concerns, please bear with us!
 - data output
     - easy data management with ACL (Access control list)
     - joined and shared datasets
-- highly paralleized, compressed, replicated storage
+- highly parallelized, compressed, replicated storage
 
 ???
 - started as an internal only product, one of the secret sauce of google's success
@@ -122,7 +122,7 @@ I understand your concerns, please bear with us!
 - goes have JSON queries, raw json fields, json path type queries
 - IP address parsing
 - regular expressions
-- these are expensive in a normal relational database that has indicies
+- these are expensive in a normal relational database that has indices
 - streaming injection API (100k rows/second per table)
 - large, multi-tenant (shared) computer cluster
 ---
@@ -157,12 +157,12 @@ I understand your concerns, please bear with us!
 - move on from numbers, use an ipython notebook with Julia as backend with gadfly
 ---
 # How it works
-- disk speed as bottlenneck
+- disk speed as bottleneck
 - show a diagram of BQ
 - column oriented storage
     - compressible, show it!
     - read multiple copies in parallel
-- SQL is cheap to paralleize but aggregation is complex
+- SQL is cheap to parallelize but aggregation is complex
     - distinct values are tricky
     - joins with large datasets are tricky
     - it's feels like SQL, seems like SQL
