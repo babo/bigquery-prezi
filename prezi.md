@@ -4,14 +4,16 @@
 - for big data
 - runs SQL queries
 - fast
-- it doesn't matter what size of data
-- what type of queries you do
+    - it doesn't matter what size of data
+    - what type of queries you do
 - easy to use
 - no administration or provisioning
 ---
 # BigQuery
 ???
 your guess were correct
+- I'm here to represent the Norwegian office of Nordcloud
+- attila.babo@nordcloud.com
 ---
 # Goal
 
@@ -52,10 +54,6 @@ I understand your concerns, please bear with us!
 ## How to get my data in?
 
 - anywhere -> Google Cloud Storage -> BiqQuery table
-- Google Compute Engine -> Google Cloud Storage -> BiqQuery table
-    - more practical for large datasets when pulling is faster
-- Hadoop -> ??? -> BigQuery table
-- streaming injection -> BiqQuery table
 ???
 - all these demos were against a public dataset
 - to demo it with real data
@@ -99,62 +97,16 @@ I understand your concerns, please bear with us!
     - easy data management with ACL (Access control list)
     - joined and shared datasets
 - highly parallelized, compressed, replicated storage
-
 ???
 - started as an internal only product, one of the secret sauce of google's success
 - fully managed
 - data is stored safely
----
-# quote from XXX
-- get a slice of a giant cluster of machines with guaranties rather than having a medium sized cluster
-
-.center[### Use it, it's a competitive advantage!]
----
-# Technical highlights
-- web console, connectors to R, ipython, Pandas
-- import data from Cloud Storage, Hadoop, Google Cloud DataFlow, ODBC
-- hadoop as source or sink
 - single namespace, join table from anywhere
-- fast, atomic imports
-- ETL, deduplicate within BQ
-- a rich SQL language
-- extends with nested and repeated fields
-- goes have JSON queries, raw json fields, json path type queries
-- IP address parsing
-- regular expressions
-- these are expensive in a normal relational database that has indices
-- streaming injection API (100k rows/second per table)
-- large, multi-tenant (shared) computer cluster
 ---
-# Pricing
-- loading data into BigQuery
-    - free
-- streaming data into BigQuery (After August 12, 2015)
-    - row based, $0.01 per 200 MB, 1 KB minimum size
-    - ~ 2.6GB for 1 NOK
-- storing data
-    - $0.02 per GB, per month
-    - ~ 0.15NOK per GB, per month
-- exporting data
-    - free
-# Query Pricing
-- 37.65 NOK for 1TB of total data processed
+.footnote[Use it, it's a competitive advantage!]
+.Aligner-item[###Get a slice of a giant cluster of machines with guaranties rather than having a medium sized cluster]
 
-- the first 1 TB of data processed per month
-    - free
-- queries that return an error, or for cached queries
-    - free
-
-.footnote($1 => 7.53NOK)
-???
-- based on total data processed
-    - charged according to the total data processed in the columns you select
-    - the total data per column is calculated based on the types of data in the column
----
-# Demo of a small dataset
-???
-- use webui
-- move on from numbers, use an ipython notebook with Julia as backend with gadfly
+.right[*Jordan Tigani*]
 ---
 # How it works
 - disk speed as bottleneck
@@ -170,9 +122,62 @@ I understand your concerns, please bear with us!
         - but it's different
         - some things are harder, examples above
 ---
+# Demo of a small dataset
+???
+- use webui
+- move on from numbers, use an ipython notebook with Julia as backend with gadfly
+---
+# Technical highlights
+- fast, atomic imports
+    - Cloud Storage
+    - Hadoop
+    - Google Cloud DataFlow
+    - ODBC
+- streaming injection API (100k rows/second per table)
+- ETL (Extract, Transform, Load) operations inside BigQuery
+    - deduplication
+- exports
+    - Hadoop
+- a rich SQL language
+    - extends with nested and repeated fields
+    - JSON queries
+    - raw JSON fields
+    - JSON path type queries
+    - IP address parsing
+    - regular expressions
+- web console, connectors for R, iPython, Pandas, Excel
+???
+- these are expensive in a normal relational database that has indices
+- large, multi-tenant (shared) computer cluster
+---
+# Pricing
+- loading data into BigQuery is free
+- streaming data into BigQuery
+    - 2.6 GB data for 1 NOK *from August 12, 2015*
+- storing data
+    - 1 GB of data is 0.15NOK per month
+- exporting data
+    - free
+
+# Query Pricing
+- 37.65 NOK for 1TB of total data processed
+.footnote[$1 is 7.53NOK]
+???
+- based on total data processed
+    - charged according to the total data processed in the columns you select
+    - the total data per column is calculated based on the types of data in the colum
+- streaming is row based
+- the first 1 TB of data processed per month is free
+- queries that return an error, or for cached queries
+
+- stream $0.01 per 200 MB, 1 KB minimum size
+- storage 2 cent
+- query $5
+---
 # Demo with a large dataset
 - NYC taxi rides from 2010-2013
 - 120GB of uncompressed data
+???
 - data fields, geolocation
 - how to move that in?
 - simple queries
@@ -181,7 +186,6 @@ I understand your concerns, please bear with us!
 - eliminate them
 - complex queries with output on the map
 ---
----
 # How to start with BiqQuery?
 - use your private gmail, there is a campaign
     - 300 USD for two month credit
@@ -189,19 +193,21 @@ I understand your concerns, please bear with us!
 - prefect way to safely experiment and get a feeling about the service
     - including the cost
 
-# How to continue
+# How to continue?
+- Nordcloud is here to help
+- advisory, consulting and 24/7 operation duty
+- Google's only premium consulting partner in the Nordics
+---
+class: middle
 ![](http://cdn2.hubspot.net/hub/453090/file-2126415513-jpg/nordcloud-logo-main-380x80.jpg)
 
-- we are the only premium consulting partner in the Nordics for Google
-    - advisory, consulting and 24/7 operation duty
-- looking forward to here from you
-
-- attila.babo@nordcloud.com
-- this presentation is shared with you
-- try it at home!
-
+#I look forward to hearing from you
+.right[*attila.babo@nordcloud.com*]
 .footnote[http://hive.gl/BRQYQ]
 ???
+# try it at home!
+- this presentation is shared with you
+- try it at home!
 - buy Google Cloud services through Nordcloud
 - we invoice it in NOK
 ---
@@ -211,7 +217,3 @@ I understand your concerns, please bear with us!
 - provide advisory, consulting, training and 24/7 operation duty for cloud computing services
 - over two hundred projects in a wide range of industry sectors
 - headquartered in Helsinki the company is growing rapidly, in the nordics and beyond
-- I'm here to represent the Norwegian office of Nordcloud
-- attila.babo@nordcloud.com
-
-.footnote[http://hive.gl/BRQYQ]
