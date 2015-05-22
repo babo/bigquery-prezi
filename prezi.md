@@ -8,12 +8,20 @@
     - what type of queries you do
 - easy to use
 - no administration or provisioning
+???
+no hardware, no virtual machines, no software installation
 ---
 # BigQuery
 ???
 your guess were correct
 - I'm here to represent the Norwegian office of Nordcloud
 - attila.babo@nordcloud.com
+# Please raise your hand
+
+- heard of BigQuery
+- using analytics
+    - SQL for analytics
+    - BigQuery for analytics
 ---
 # Goal
 
@@ -26,16 +34,8 @@ your guess were correct
 - try it at home!
 
 .footnote[http://hive.gl/BRQYQ]
-
-???
-# Please raise your hand
-
-- heard of BigQuery
-- using analytics
-    - SQL for analytics
-    - BigQuery for analytics
 ---
-# Does BigQuery matters to me?
+# Does BigQuery matter to me?
 
 - I don't have petabyte scale problems
 - my current solution is fine
@@ -43,6 +43,7 @@ your guess were correct
 - I'm not feeling safe to use it
 ???
 I understand your concerns, please bear with us!
+we'll answer these concerns
 ---
 # Demo to give an impression
 - 1m rows
@@ -94,9 +95,11 @@ I understand your concerns, please bear with us!
 - flexible, multiple input sources
     - streaming injection, data is available immediately
 - data output
+    - tablou, etc. RE
+    - Excel RE
     - easy data management with ACL (Access control list)
     - joined and shared datasets
-- highly parallelized, compressed, replicated storage
+- highly parallelized, compressed, replicated storage RE
 ???
 - started as an internal only product, one of the secret sauce of google's success
 - fully managed
@@ -107,25 +110,32 @@ I understand your concerns, please bear with us!
 .Aligner-item[###Get a slice of a giant cluster of machines with guaranties rather than having a medium sized cluster]
 
 .right[*Jordan Tigani*]
+???
+Book cover
 ---
 # How it works
+![](diagram.png)
+???
 - disk speed as bottleneck
-- show a diagram of BQ
-- column oriented storage
-    - compressible, show it!
-    - read multiple copies in parallel
-- SQL is cheap to parallelize but aggregation is complex
-    - distinct values are tricky
-    - joins with large datasets are tricky
-    - it's feels like SQL, seems like SQL
-        - many advantages
-        - but it's different
-        - some things are harder, examples above
+---
+# Column oriented storage
+![](column.png)
+???
+- compressible, show it!
+- read multiple copies in parallel
+---
+# SQL is cheap to parallelize but aggregation is complex
+- it's feels like SQL, seems like SQL
+    - many advantages
+    - but it's different, some things are harder
+        - distinct values are tricky
+        - joins with large datasets are tricky
 ---
 # Demo of a small dataset
 ???
 - use webui
 - move on from numbers, use an ipython notebook with Julia as backend with gadfly
+- Excel, R
 ---
 # Technical highlights
 - fast, atomic imports
@@ -150,9 +160,9 @@ I understand your concerns, please bear with us!
 - these are expensive in a normal relational database that has indices
 - large, multi-tenant (shared) computer cluster
 ---
-# Pricing
+# Import, export, storage pricing
 - loading data into BigQuery is free
-- streaming data into BigQuery
+- streaming live data into BigQuery
     - 2.6 GB data for 1 NOK *from August 12, 2015*
 - storing data
     - 1 GB of data is 0.15NOK per month
@@ -160,7 +170,7 @@ I understand your concerns, please bear with us!
     - free
 
 # Query Pricing
-- 37.65 NOK for 1TB of total data processed
+- 1TB of total data processed is 37.65 NOK
 .footnote[$1 is 7.53NOK]
 ???
 - based on total data processed
@@ -173,6 +183,8 @@ I understand your concerns, please bear with us!
 - stream $0.01 per 200 MB, 1 KB minimum size
 - storage 2 cent
 - query $5
+- per day
+- you are paying for the data touched during the query
 ---
 # Demo with a large dataset
 - NYC taxi rides from 2010-2013
@@ -187,11 +199,10 @@ I understand your concerns, please bear with us!
 - complex queries with output on the map
 ---
 # How to start with BiqQuery?
-- use your private gmail, there is a campaign
-    - 300 USD for two month credit
-- add billing, this is required but doesn't cost you within the credit
+- there is a campaign * use your private gmail *
+    - free usage up to 300 USD for max two month
 - prefect way to safely experiment and get a feeling about the service
-    - including the cost
+    - including the cost structure
 
 # How to continue?
 - Nordcloud is here to help
@@ -208,6 +219,7 @@ class: middle
 # try it at home!
 - this presentation is shared with you
 - try it at home!
+- When you see the value that BigQuery gives you, please contact Nordcloud and we will help you set up an account where you will get a monthly invoice from us in NOK
 - buy Google Cloud services through Nordcloud
 - we invoice it in NOK
 ---
