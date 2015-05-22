@@ -10,7 +10,6 @@
 - no administration or provisioning
 
 your guess was correct, it's BigQuery
-.footnote[http://hive.gl/BRQYQ]
 ---
 # Goal
 
@@ -21,7 +20,9 @@ your guess was correct, it's BigQuery
 - to share it with your colleagaues and like minded friends
 - this presentation is shared with you
 - try it at home!
+
 .footnote[http://hive.gl/BRQYQ]
+
 ---
 # ![](http://cdn2.hubspot.net/hub/453090/file-2126415513-jpg/nordcloud-logo-main-380x80.jpg)
 
