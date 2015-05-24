@@ -13,7 +13,7 @@ no hardware, no virtual machines, no software installation
 ---
 # BigQuery
 ???
-your guess were correct
+Your guess were correct
 - I'm here to represent the Norwegian office of Nordcloud
 - attila.babo@nordcloud.com
 # Please raise your hand
@@ -43,7 +43,7 @@ your guess were correct
 - I'm not feeling safe to use it
 ???
 I understand your concerns, please bear with us!
-we'll answer these concerns
+My personal goal is to address these.
 ---
 # Demo to give an impression
 - 1m rows
@@ -54,17 +54,20 @@ we'll answer these concerns
 ---
 ## How to get my data in?
 
-- anywhere -> Google Cloud Storage -> BiqQuery table
+- anywhere -> Google Cloud Storage -> BigQuery table
 ???
 - all these demos were against a public dataset
 - to demo it with real data
 - use a "small" CSV file from a public dataset
     - from my machine, using command line, explain while compress
     - start it, but have an uploaded copy to rescue
-- explain the data flow: mac -> storage -> BQ table
+- explain the data flow: mac -> storage -> BigQuery table
 - explain the content, data types
 - create the table, if it arrived use it or the present copy
-- .. this takes a while so we move on
+- .. This'll take a while, let's move on
+---
+# Telecommunications - SMS, Call, Internet usage in Milano
+.footnote[https://dandelion.eu/datagems/SpazioDati/telecom-sms-call-internet-mi/resource/]
 ---
 # Background
 - SQL is great
@@ -77,7 +80,7 @@ we'll answer these concerns
 - scale out!
 - started at Google by internal need
     - fast
-    - scaleable
+    - scalable
     - managed
     - ad-hoc analytics
     - not just for your data scientist
@@ -95,13 +98,13 @@ we'll answer these concerns
 - flexible, multiple input sources
     - streaming injection, data is available immediately
 - data output
-    - tablou, etc. RE
+    - tableau, etc. RE
     - Excel RE
-    - easy data management with ACL (Access control list)
+    - easy data management with ACL (Access Control List)
     - joined and shared datasets
 - highly parallelized, compressed, replicated storage RE
 ???
-- started as an internal only product, one of the secret sauce of google's success
+- started as an internal only product, one of the secret sauce of Google's success
 - fully managed
 - data is stored safely
 - single namespace, join table from anywhere
@@ -134,7 +137,9 @@ Book cover
 # Demo of a small dataset
 ???
 - use webui
-- move on from numbers, use an ipython notebook with Julia as backend with gadfly
+- move on from numbers, demo it with tableau
+- switch to the full dataset
+- move on from numbers, use an iPython notebook with Julia as backend with gadfly
 - Excel, R
 ---
 # Technical highlights
@@ -175,7 +180,7 @@ Book cover
 ???
 - based on total data processed
     - charged according to the total data processed in the columns you select
-    - the total data per column is calculated based on the types of data in the colum
+    - the total data per column is calculated based on the types of data in the column
 - streaming is row based
 - the first 1 TB of data processed per month is free
 - queries that return an error, or for cached queries
@@ -198,16 +203,16 @@ Book cover
 - eliminate them
 - complex queries with output on the map
 ---
-# How to start with BiqQuery?
+# How to start with BigQuery?
 - there is a campaign * use your private gmail *
-    - free usage up to 300 USD for max two month
+    - free usage up to $300 for max two month
 - prefect way to safely experiment and get a feeling about the service
     - including the cost structure
 
 # How to continue?
 - Nordcloud is here to help
 - advisory, consulting and 24/7 operation duty
-- Google's only premium consulting partner in the Nordics
+- We are Google's only premium consulting partner in the Nordics
 ---
 class: middle
 ![](http://cdn2.hubspot.net/hub/453090/file-2126415513-jpg/nordcloud-logo-main-380x80.jpg)
@@ -216,7 +221,7 @@ class: middle
 .right[*attila.babo@nordcloud.com*]
 .footnote[http://hive.gl/BRQYQ]
 ???
-# try it at home!
+# Try it at home!
 - this presentation is shared with you
 - try it at home!
 - When you see the value that BigQuery gives you, please contact Nordcloud and we will help you set up an account where you will get a monthly invoice from us in NOK
@@ -228,4 +233,4 @@ class: middle
 - experts in migration, automation and management of modern cloud infrastructure
 - provide advisory, consulting, training and 24/7 operation duty for cloud computing services
 - over two hundred projects in a wide range of industry sectors
-- headquartered in Helsinki the company is growing rapidly, in the nordics and beyond
+- headquartered in Helsinki the company is growing rapidly, in the Nordics and beyond
