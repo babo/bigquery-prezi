@@ -20,6 +20,7 @@
 Your guess were correct
 - I'm here to represent the Norwegian office of Nordcloud
 - attila.babo@nordcloud.com
+- little background
 # Please raise your hand
 
 - heard of BigQuery
@@ -84,11 +85,7 @@ My personal goal is to address these.
 ???
 
 - show data size in GB and number of rows
-- wiki 1
-- cache off
-- wiki 1
-- wiki 2
-- wiki 3
+- wikipedia 1-5
 - show a mission impossible: effective regular expression in queries
 ---
 ## How to get my data in?
