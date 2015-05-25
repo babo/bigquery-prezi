@@ -4,17 +4,18 @@
 - fully managed
 - analytics engine
 - for big data
-- runs SQL queries
+- SQL queries
 - fast
-    - it doesn't matter what size of data
-    - what type of queries you do
-???
-Thank you for joining us today!
 
-no hardware, no virtual machines, no software to install
+???
+- Thank you for joining us today!
+- no hardware, no virtual machines, no software to install
+- it doesn't matter what size of data
+- what type of queries you do
 ---
 # BigQuery
-- Analytics as a service
+- analytics
+- not just for your data scientist
 ???
 Your guess were correct
 - I'm here to represent the Norwegian office of Nordcloud
@@ -26,18 +27,17 @@ Your guess were correct
     - SQL for analytics
     - BigQuery for analytics
 ---
-# Goal
+# Goal: try it at home!
 
 - practical introduction
 - live demos
 - hands-on experience using BigQuery
-- enough information and a burning desire to try it at home
-- this presentation is shared with you
-- try it at home!
+- enough information and a burning desire to try it with your own data
 
 .footnote[http://hive.gl/BRQYQ]
 ???
 - the power of curiosity
+- this presentation is shared with you
 - please share it with your colleagues and like minded friends
 ---
 # Does big data matter to me?
@@ -53,15 +53,16 @@ Your guess were correct
 - architectural limitations
 
 ???
-- My current solution is fine
-- I don't have petabyte scale problems
-- I've checked it a few years back but it was too limited and pricey
-- I'm not feeling safe to use it
+- I don't have problems at petabyte scale
+- as the amount of data grows the amount of pain doing simple things like backup or schema changes are exponentially worse
+- BigQuery
+    - My current solution is fine
+    - I've checked it a few years back but it was too limited and pricey
+    - I'm not feeling safe to use it
 
 I understand your concerns, please bear with us!
 My personal goal is to address these.
 
-- as the amount of data grows the amount of pain doing simple things like backup or schema changes are exponentially worse
 - million records a day for years
 - 10 actions from a million user per day
 - business to business
@@ -95,6 +96,7 @@ My personal goal is to address these.
 - anywhere -> Google Cloud Storage -> BigQuery Storage
 ???
 - all these demos were against a public dataset
+- Wikipedia is great but what about MY data?
 - to demo it with real data
 - use a "small" CSV file from a public dataset
     - from my machine, using command line, explain while compress
@@ -123,25 +125,25 @@ My personal goal is to address these.
     during the same connection one of the following limits is reached:​
     15 minutes from the last generated CDR
     5 MB from the last generated CDR
-Square id: the id of the square that is part of the Milano GRID; TYPE: numeric
-Time interval: the beginning of the time interval expressed as the number of millisecond elapsed from the Unix Epoch on January 1st, 1970 at UTC. The end of the time interval can be obtained by adding 600000 milliseconds (10 minutes) to this value. TYPE: numeric
-Country code: the phone country code of a nation. Depending on the measured activity this value assumes different meanings that are explained later. TYPE: numeric
-SMS-in activity: the activity in terms of received SMS inside the Square id, during the Time interval and sent from the nation identified by the Country code. TYPE: numeric
-SMS-out activity: the activity in terms of sent SMS inside the Square id, during the Time interval and received by the nation identified by the Country code. TYPE: numeric
-Call-in activity: the activity in terms of received calls inside the Square id, during the Time interval and issued from the nation identified by the Country code. TYPE: numeric
-Call-out activity: the activity in terms of issued calls inside the Square id, during the Time interval and received by the nation identified by the Country code. TYPE: numeric
-Internet traffic activity: the activity in terms of performed internet traffic inside the Square id, during the Time interval and by the nation of the users performing the connection identified by the Country code . TYPE: numeric
+- Square id: the id of the square that is part of the Milano GRID; TYPE: numeric
+- Time interval: the beginning of the time interval expressed as the number of millisecond elapsed from the Unix Epoch on January 1st, 1970 at UTC. The end of the time interval can be obtained by adding 600000 milliseconds (10 minutes) to this value. TYPE: numeric
+- Country code: the phone country code of a nation. Depending on the measured activity this value assumes different meanings that are explained later. TYPE: numeric
+- SMS-in activity: the activity in terms of received SMS inside the Square id, during the Time interval and sent from the nation identified by the Country code. TYPE: numeric
+- SMS-out activity: the activity in terms of sent SMS inside the Square id, during the Time interval and received by the nation identified by the Country code. TYPE: numeric
+- Call-in activity: the activity in terms of received calls inside the Square id, during the Time interval and issued from the nation identified by the Country code. TYPE: numeric
+- Call-out activity: the activity in terms of issued calls inside the Square id, during the Time interval and received by the nation identified by the Country code. TYPE: numeric
+- Internet traffic activity: the activity in terms of performed internet traffic inside the Square id, during the Time interval and by the nation of the users performing the connection identified by the Country code . TYPE: numeric
 ---
 # Analytics as we know it
 - SQL is great
 - indexes are great
-- but
 - there are known limitations
-    - scaling up
     - asking a question you never asked before
     - running a query on the full dataset
+- scaling up?
+- tune it once again?
 ???
-- 100MB/sec for a hd
+- after the demos let's back to our topic: analytics
 - limit could be memory size, disk space, available IO capacity or "just" money
 - tuning a database for quick queries is an art
     - indexes
@@ -151,20 +153,25 @@ Internet traffic activity: the activity in terms of performed internet traffic i
 - process it on an external system like Hadoop
 ---
 # Solution
-- scale out!
+- scale out strategy
+    - fan out queries to thousands of servers
+    - read from tens or hundreds of thousands of disks
+    - return answers in memory
 - started at Google by internal need
-    - fast
-    - scalable
-    - managed
-    - ad-hoc analytics
-    - not just for your data scientist
-- part of BigData stack 2.0
+    - use data for decisions
+    - use SQL to formulate questions
+    - get answers interactively
+    - even for ad-hoc questions
+- available for the general public since 2012
 ???
+- 100MB/sec for a disk
 - how to read a terabyte in a second
+    - skip a lot of data
+    - expensive hardware
+    - run it in parallel, thousands of disks, hundreds of servers
+- part of they BigData stack 2.0
 ---
 # Current state
-- affordable
-- available for the general public
 - open interfaces
     - REST, WebUI
 - API with JSON data
@@ -174,6 +181,7 @@ Internet traffic activity: the activity in terms of performed internet traffic i
     - easy data management with ACL (Access Control List)
     - joined and shared datasets
 - safe data storage
+- affordable
 ???
 - started as an internal only product, one of the secret sauce of Google's success
 - fully managed
@@ -184,13 +192,14 @@ Internet traffic activity: the activity in terms of performed internet traffic i
 - highly parallelized, compressed, replicated storage
 - not just a throw away datastore
 ---
-###Get a slice of a giant cluster of machines with guaranties rather than having a medium sized cluster
+###Get a slice of a giant cluster of machines with guaranties rather than having a medium sized cluster.
 .right[*Jordan Tigani*]
 ![](bq_book.jpg)
 ???
-.footnote[Use it, it's a competitive advantage!]
+- Don't build of your own
+- Use it, it's a competitive advantage!
 ---
-# How it works
+# Architecture
 ![](diagram.png)
 ???
 - disk speed as bottleneck
@@ -200,7 +209,7 @@ Internet traffic activity: the activity in terms of performed internet traffic i
 - queries come in through the root
 - sharded and split at intermediate servers, they will do aggregation like grouping and ordering
 - leaf nodes are thousands of machines, they do filtering, selection
-- they read the columnar storage in prallel
+- they read the columnar storage in parallel
 - they do reductions all the way up
 
 ---
@@ -220,15 +229,18 @@ Internet traffic activity: the activity in terms of performed internet traffic i
 ---
 # Technical highlights
 - fast, atomic imports
-    - Cloud Storage
-    - Hadoop
-    - Google Cloud DataFlow
-    - ODBC
-- streaming injection API (100k rows/second per table)
+- live data
+    - streaming injection API (100k rows/second per table)
+- web console, connectors for R, iPython, Pandas, Excel
 - ETL (Extract, Transform, Load) operations inside BigQuery
-    - deduplication
-- exports
-    - Hadoop
+- integrated with some of the industry-leading tools
+    - loading
+    - transforming
+    - visualizing data
+    - exporting
+    - de-duplication
+---
+# Feels like SQL, seems like SQL
 - a rich SQL language
     - extends with nested and repeated fields
     - JSON queries
@@ -236,18 +248,13 @@ Internet traffic activity: the activity in terms of performed internet traffic i
     - JSON path type queries
     - IP address parsing
     - regular expressions
-- web console, connectors for R, iPython, Pandas, Excel
-???
-- these are expensive in a normal relational database that has indices
-- large, multi-tenant (shared) computer cluster
----
-# feels like SQL, seems like SQL
 - many advantages
 - but it's different, some things are harder
     - distinct values are tricky
     - joins with large datasets are tricky
 ???
-SQL is cheap to parallelize but aggregation is complex
+- SQL is cheap to parallelize but aggregation is complex
+- these are expensive in a normal relational database that has indices
 ---
 # Import, export, storage pricing
 - loading data into BigQuery is free
