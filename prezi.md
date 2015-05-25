@@ -210,13 +210,6 @@ Internet traffic activity: the activity in terms of performed internet traffic i
 - compressible, show it!
 - read multiple copies in parallel
 ---
-# SQL is cheap to parallelize but aggregation is complex
-- it's feels like SQL, seems like SQL
-    - many advantages
-    - but it's different, some things are harder
-        - distinct values are tricky
-        - joins with large datasets are tricky
----
 # Demo of a small dataset
 ???
 - use webui
@@ -247,6 +240,14 @@ Internet traffic activity: the activity in terms of performed internet traffic i
 ???
 - these are expensive in a normal relational database that has indices
 - large, multi-tenant (shared) computer cluster
+---
+# feels like SQL, seems like SQL
+- many advantages
+- but it's different, some things are harder
+    - distinct values are tricky
+    - joins with large datasets are tricky
+???
+SQL is cheap to parallelize but aggregation is complex
 ---
 # Import, export, storage pricing
 - loading data into BigQuery is free
