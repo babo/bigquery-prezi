@@ -1,0 +1,27 @@
+[{
+    "name": "Square_id",
+    "type": "INTEGER",
+    "mode": "REQUIRED"
+}, {
+    "name": "Time_interval",
+    "type": "INTEGER",
+    "mode": "REQUIRED"
+}, {
+    "name": "Country_code",
+    "type": "INTEGER"
+}, {
+    "name": "SMS_in",
+    "type": "FLOAT"
+}, {
+    "name": "SMS_out",
+    "type": "FLOAT"
+}, {
+    "name": "Call_in",
+    "type": "FLOAT"
+}, {
+    "name": "Call_out",
+    "type": "FLOAT"
+}, {
+    "name": "Internet",
+    "type": "FLOAT"
+}]

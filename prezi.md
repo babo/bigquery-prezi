@@ -70,7 +70,7 @@ My personal goal is to address these.
 - intense computation over your data like machine learning
 
 ---
-# Demo to give an impression
+# Demo to give you an impression
 
     SELECT
       title,
@@ -140,6 +140,8 @@ My personal goal is to address these.
 - scaling up?
 - tune it once again?
 ???
+# IMPORT DATA!
+- [console](https://bigquery.cloud.google.com/)
 - after the demos let's back to our topic: analytics
 - limit could be memory size, disk space, available IO capacity or "just" money
 - tuning a database for quick queries is an art
@@ -217,7 +219,9 @@ My personal goal is to address these.
 - read multiple copies in parallel
 ---
 # Demo of a small dataset
+.footnote[https://bigquery.cloud.google.com/]
 ???
+# IMPORT DATA!
 - use webui
 - move on from numbers, demo it with tableau
 - switch to the full dataset
