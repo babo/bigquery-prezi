@@ -1,0 +1,11 @@
+[{
+    "name": "Country",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Name of the country"
+}, {
+    "name": "Prefix",
+    "type": "INTEGER",
+    "mode": "REQUIRED",
+    "description": "Calling prefix"
+}]

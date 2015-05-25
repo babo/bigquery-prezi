@@ -25,6 +25,17 @@ time gsutil -m cp data/sms-call-internet-mi-2013-12-23.csv.gz gs://milano_grid/2
 gsutil ls gs://milano_grid/
 head data/sms-call-internet-mi-2013-12-23.csv
 
-bq load --field_delimiter ',' --schema ./schema.json --skip_leading_rows 1  \
+time bq load --field_delimiter ',' --schema ./schema.json --skip_leading_rows 1  \
     milano.12_23 \
     gs://milano_grid/2013-12-23.csv.gz
+
+# helpers
+time bq load  --field_delimiter ',' --schema ./country_schema.json --skip_leading_rows 1 \
+    helpers.country_code \
+    gs://helpers/country_prefix.csv.gz
+
+# How to upload multiple files to the same table
+time for X in `gsutil ls gs://milano_grid/data/sms-call-internet-mi-2013-12\*`; do
+    echo ${X}
+    bq load -F '\t' --schema ./schema.json --skip_leading_rows 1  milano.december ${X}
+done
