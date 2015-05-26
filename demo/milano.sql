@@ -30,6 +30,24 @@ ORDER BY
   call_out DESC
 LIMIT 100;
 
+/* Calls by country */
+SELECT
+  Country,
+  SUM(Call_out) as call_out
+FROM [milano.12_23] as day
+  JOIN [helpers.country_code] as cc
+  ON
+    cc.prefix = day.Country_code
+WHERE
+  Call_out IS NOT NULL AND
+  Country_code != 39 AND
+  Country_code != 0
+GROUP BY
+  Country
+ORDER BY
+  call_out DESC
+LIMIT 100;
+
 /* Where are the Italians calling out the most */
 SELECT
   Country_code,

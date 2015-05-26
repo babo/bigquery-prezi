@@ -19,15 +19,15 @@ gsutil ls gs://milano_grid/
 
 # upload it with a new name
 gsutil mb -l eu gs://milano_grid
-time gsutil -m cp data/sms-call-internet-mi-2013-12-23.csv.gz gs://milano_grid/2013-12-23.csv.gz
+time gsutil -m cp data/sms-call-internet-mi-2013-12-24.tsv.gz gs://milano_grid/2013-12-24.tsv.gz
 
 # import it into BigQuery
 gsutil ls gs://milano_grid/
-head data/sms-call-internet-mi-2013-12-23.csv
+head data/sms-call-internet-mi-2013-12-24.tsv
 
-time bq load --field_delimiter ',' --schema ./schema.json --skip_leading_rows 1  \
-    milano.12_23 \
-    gs://milano_grid/2013-12-23.csv.gz
+time bq load --field_delimiter '\t' --schema ./schema.json --skip_leading_rows 0  \
+    milano.12_24 \
+    gs://milano_grid/2013-12-24.tsv.gz
 
 # helpers
 time bq load  --field_delimiter ',' --schema ./country_schema.json --skip_leading_rows 1 \
