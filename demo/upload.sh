@@ -5,7 +5,7 @@ open 'https://dandelion.eu/datagems/SpazioDati/telecom-sms-call-internet-mi/reso
 
 # Compress is with gzip, BigQuery Storage loves it
 ls -hl data
-time gzip -k data/sms-call-internet-mi-2013-12-23.csv
+time gzip -k data/sms-call-internet-mi-2013-12-24.tgsv
 ls -hl data
 
 # Use Google Cloud SDK
@@ -25,17 +25,17 @@ time gsutil -m cp data/sms-call-internet-mi-2013-12-24.tsv.gz gs://milano_grid/2
 gsutil ls gs://milano_grid/
 head data/sms-call-internet-mi-2013-12-24.tsv
 
-time bq load --field_delimiter '\t' --schema ./schema.json --skip_leading_rows 0  \
+bq load --field_delimiter '\t' --schema ./schema.json --skip_leading_rows 0  \
     milano.12_24 \
     gs://milano_grid/2013-12-24.tsv.gz
 
 # helpers
-time bq load  --field_delimiter ',' --schema ./country_schema.json --skip_leading_rows 1 \
+bq load  --field_delimiter ',' --schema ./country_schema.json --skip_leading_rows 1 \
     helpers.country_code \
     gs://helpers/country_prefix.csv.gz
 
 # How to upload multiple files to the same table
-time for X in `gsutil ls gs://milano_grid/data/sms-call-internet-mi-2013-12\*`; do
+for X in `gsutil ls gs://milano_grid/data/sms-call-internet-mi-2013-12\*`; do
     echo ${X}
     bq load -F '\t' --schema ./schema.json --skip_leading_rows 1  milano.december ${X}
 done
