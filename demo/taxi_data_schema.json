@@ -1,0 +1,83 @@
+[
+    {
+        "description": "the taxi’s unique id number",
+        "type": "STRING",
+        "name": "medallion",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "drivers's unique id number",
+        "type": "STRING",
+        "name": "hack_license",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "STRING",
+        "name": "vendor_id",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "STRING",
+        "name": "rate_code",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "STRING",
+        "name": "store_and_fwd_flag"
+    },
+    {
+        "description": "",
+        "type": "TIMESTAMP",
+        "name": "pickup_datetime",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "TIMESTAMP",
+        "name": "dropoff_datetime",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "INTEGER",
+        "name": "passenger_count",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "INTEGER",
+        "name": "trip_time_in_secs",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "FLOAT",
+        "name": "trip_distance",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "FLOAT",
+        "name": "pickup_longitude",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "FLOAT",
+        "name": "pickup_latitude",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "FLOAT",
+        "name": "dropoff_longitude"
+    },
+    {
+        "description": "",
+        "type": "FLOAT",
+        "name": "dropoff_latitude"
+    }
+]

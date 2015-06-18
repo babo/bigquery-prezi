@@ -1,0 +1,68 @@
+[
+    {
+        "description": "",
+        "type": "STRING",
+        "name": "medallion",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "STRING",
+        "name": "hack_license",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "STRING",
+        "name": "vendor_id",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "TIMESTAMP",
+        "name": "pickup_datetime",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "STRING",
+        "name": "payment_type",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "FLOAT",
+        "name": "fare_amount",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "FLOAT",
+        "name": "surcharge",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "FLOAT",
+        "name": "mta_tax",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "FLOAT",
+        "name": "tip_amount",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "FLOAT",
+        "name": "tolls_amount",
+        "mode": "REQUIRED"
+    },
+    {
+        "description": "",
+        "type": "FLOAT",
+        "name": "total_amount",
+        "mode": "REQUIRED"
+    }
+]
