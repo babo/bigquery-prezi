@@ -1,4 +1,4 @@
-# Overview
+# BigQuery
 
 - easy to use
 - fully managed
@@ -13,7 +13,7 @@
 - it doesn't matter what size of data
 - what type of queries you do
 ---
-# BigQuery
+# Elevator pitch
 - analytics
 - not just for your data scientist
 ???
